@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>برای نازنین 💜</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            min-height: 100vh;
+            min-height: 100dvh;
+            overflow: hidden;
+
+            position: relative;
+
+            font-family: Tahoma, Arial, sans-serif;
+
+            /* پس‌زمینه کهکشانی */
+            background:
+                radial-gradient(circle at 20% 15%,
+                    rgba(151, 82, 255, 0.28) 0%,
+                    rgba(151, 82, 255, 0.08) 18%,
+                    transparent 38%),
+
+                radial-gradient(circle at 85% 30%,
+                    rgba(108, 55, 190, 0.25) 0%,
+                    rgba(108, 55, 190, 0.08) 20%,
+                    transparent 42%),
+
+                radial-gradient(circle at 50% 85%,
+                    rgba(91, 36, 160, 0.25) 0%,
+                    transparent 40%),
+
+                linear-gradient(
+                    145deg,
+                    #090413 0%,
+                    #120722 30%,
+                    #1a0b30 55%,
+                    #08030f 100%
+                );
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        /* =========================
+           نورهای کهکشانی
+        ========================== */
+
+        .galaxy-glow {
+            position: absolute;
+
+            border-radius: 50%;
+
+            filter: blur(70px);
+
+            pointer-events: none;
+        }
+
+        .glow-one {
+            width: 240px;
+            height: 240px;
+
+            top: -100px;
+            right: -70px;
+
+            background: rgba(160, 85, 255, 0.32);
+        }
+
+        .glow-two {
+    width: 260px;
+    height: 260px;
+
+    bottom: 0;
+    left: 0;
+
+    background: rgba(111, 45, 190, 0.28);
+}
+
+        .glow-three {
+            width: 180px;
+            height: 180px;
+
+            top: 42%;
+            left: 45%;
+
+            background: rgba(177, 104, 255, 0.08);
+
+            filter: blur(90px);
+        }
+
+
+        /* =========================
+           ستاره‌ها
+        ========================== */
+
+        .star {
+    position: absolute;
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    opacity: 0.7;
+
+    pointer-events: none;
+
+    animation: twinkle 2.5s ease-in-out infinite;
+}
+
+/* جای ستاره‌ها */
+
+.star:nth-of-type(1) { top: 8%; left: 12%; }
+.star:nth-of-type(2) { top: 14%; left: 38%; animation-delay: 0.7s; }
+.star:nth-of-type(3) { top: 9%; right: 20%; animation-delay: 1.1s; }
+.star:nth-of-type(4) { top: 24%; right: 27%; animation-delay: 0.3s; }
+.star:nth-of-type(5) { top: 31%; left: 18%; animation-delay: 1.5s; }
+.star:nth-of-type(6) { top: 38%; left: 12%; animation-delay: 0.9s; }
+.star:nth-of-type(7) { top: 42%; right: 12%; animation-delay: 1.8s; }
+.star:nth-of-type(8) { top: 52%; left: 27%; animation-delay: 0.4s; }
+.star:nth-of-type(9) { top: 58%; right: 15%; animation-delay: 1.3s; }
+.star:nth-of-type(10) { top: 64%; left: 10%; animation-delay: 0.8s; }
+.star:nth-of-type(11) { top: 70%; right: 30%; animation-delay: 1.7s; }
+.star:nth-of-type(12) { top: 76%; left: 35%; animation-delay: 0.2s; }
+.star:nth-of-type(13) { top: 82%; right: 15%; animation-delay: 1.2s; }
+.star:nth-of-type(14) { top: 18%; left: 72%; animation-delay: 0.6s; }
+.star:nth-of-type(15) { top: 35%; left: 55%; animation-delay: 1.4s; }
+star:nth-of-type(16) { top: 48%; right: 42%; animation-delay: 0.5s; }
+.star:nth-of-type(17) { top: 88%; left: 15%; animation-delay: 1.6s; }
+.star:nth-of-type(18) { top: 92%; right: 38%; animation-delay: 0.9s; }
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.25;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+}
+
+
+        /* =========================
+           محتوای اصلی
+        ========================== */
+
+        .content {
+            position: absolute;
+
+            z-index: 10;
+
+            /*
+                کمی بالاتر از مرکز صفحه
+            */
+            top: 40%;
+
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+
+            width: 90%;
+            max-width: 500px;
+
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+
+            text-align: center;
+
+            gap: 20px;
+        }
+
+
+        /* =========================
+           متن اصلی
+        ========================== */
+
+        .message {
+            color: #ffffff;
+
+            font-size: clamp(23px, 6vw, 38px);
+
+            font-weight: bold;
+
+            line-height: 1.8;
+
+            text-shadow:
+                0 0 8px rgba(255, 255, 255, 0.18),
+                0 4px 15px rgba(0, 0, 0, 0.5);
+
+            /*
+                متن کمی نفس بکشد
+            */
+            animation: messageFloat 4s ease-in-out infinite;
+        }
+
+        @keyframes messageFloat {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+
+        /* =========================
+           دکمه
+        ========================== */
+
+        .next-button {
+            border: none;
+
+            cursor: pointer;
+
+            background: #c9a6ff;
+
+            color: #35145f;
+
+            padding: 13px 22px;
+
+            border-radius: 16px;
+
+            font-family: inherit;
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            box-shadow:
+                0 6px 25px rgba(160, 95, 255, 0.35),
+                0 0 18px rgba(200, 160, 255, 0.15);
+
+            transition:
+                transform 0.25s ease,
+                background 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .next-button:hover {
+            transform: translateY(-3px) scale(1.04);
+
+            background: #d8bfff;
+
+            box-shadow:
+                0 8px 30px rgba(170, 100, 255, 0.5);
+        }
+
+        .next-button:active {
+            transform: scale(0.94);
+        }
+
+
+        /* =========================
+           حیوانات
+        ========================== */
+
+        .animal {
+            position: absolute;
+
+            z-index: 5;
+
+            user-select: none;
+
+            pointer-events: none;
+
+            font-size: 70px;
+
+            filter:
+                drop-shadow(
+                    0 8px 12px rgba(0, 0, 0, 0.45)
+                );
+        }
+
+
+        /* 🐼 پاندا - کاملاً بالای چپ */
+
+        .panda {
+            top: 2%;
+            left: 2%;
+
+            animation: pandaMove 4s ease-in-out infinite;
+        }
+
+        @keyframes pandaMove {
+
+            0%,
+            100% {
+                transform:
+                    translateY(0)
+                    rotate(-4deg);
+            }
+
+            50% {
+                transform:
+                    translateY(8px)
+                    rotate(4deg);
+            }
+        }
+
+
+        /* 🐱 گربه - کاملاً پایین راست */
+
+        cat img {
+    width: 90px;
+    height: auto;
+    display: block;
+}
+
+        @keyframes catMove {
+
+            0%,
+            100% {
+                transform: rotate(-3deg);
+            }
+
+            50% {
+                transform:
+                    rotate(3deg)
+                    translateY(-7px);
+            }
+        }
+
+
+        /* =========================
+           تنظیم مخصوص گوشی
+        ========================== */
+
+        @media (max-width: 600px) {
+
+            .content {
+                top: 40%;
+
+                width: 86%;
+
+                gap: 18px;
+            }
+
+            .message {
+                font-size: 25px;
+
+                line-height: 1.8;
+            }
+
+            .next-button {
+                font-size: 14px;
+
+                padding:
+                    12px
+                    20px;
+
+                border-radius: 15px;
+            }
+
+            .animal {
+                font-size: 62px;
+            }
+
+            /* پاندا */
+
+            .panda {
+                top: 1.5%;
+                left: 1%;
+            }
+
+            /* گربه */
+
+            .cat {
+                right: 1%;
+                bottom: 0;
+            }
+
+            .star {
+                font-size: 11px;
+            }
+        }
+
+
+        /* گوشی‌های خیلی کوچک */
+
+        @media (max-height: 650px) {
+
+            .content {
+                top: 38%;
+            }
+
+            .message {
+                font-size: 22px;
+            }
+
+            .animal {
+                font-size: 55px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- نورهای کهکشانی -->
+
+    <div class="galaxy-glow glow-one"></div>
+    <div class="galaxy-glow glow-two"></div>
+    <div class="galaxy-glow glow-three"></div>
+
+
+    <!-- ستاره‌ها -->
+
+    <div class="star">✦</div>
+<div class="star">✧</div>
+<div class="star">✦</div>
+<div class="star">✧</div>
+<div class="star">✦</div>
+<div class="star">✧</div>
+<div class="star">✦</div>
+<div class="star">✧</div>
+<div class="star">✦</div>
+<div class="star">✧</div>
+<div class="star">✦</div>
+<div class="star">✧</div>
+<div class="star">✦</div>
+<div class="star">✧</div>
+<div class="star">✦</div>
+<div class="star">✧</div>
+<div class="star">✦</div>
+<div class="star">✧</div>
+
+
+
+    <!-- پاندا -->
+
+    <div class="animal panda">
+        🐼
+    </div>
+
+
+    <!-- گربه -->
+
+    <div class="animal cat">
+    <img src="cat.gif" alt="گربه">
+</div>
+
+    <!-- متن و دکمه -->
+
+    <main class="content">
+
+        <div class="message">
+            اینجا واسه قشنگ‌ترین فرشته دنیا ساخته شده 💜
+        </div>
+
+        <button
+            class="next-button"
+            onclick="goToNextPage()"
+        >
+            اینجارو بزن خوشگل خانوم 🎀
+        </button>
+
+    </main>
+
+
+    <script>
+
+        function goToNextPage() {
+
+            alert("صفحه بعدی به‌زودی آماده میشه 😌💜");
+
+        }
+
+    </script>
+
+</body>
+
+</html>
